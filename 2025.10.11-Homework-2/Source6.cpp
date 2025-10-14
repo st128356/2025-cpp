@@ -32,19 +32,19 @@ int main(int argc, char** argv)
 		else
 		{
 			x1 = -c / (double)b;
-			printf("1\n%.6lf", x1);
+			printf("1\n%.4lf", x1);
 		}
 		return 0;
 	}
 
-	if (D < -1e-6)
+	if (D < -1e-4)
 	{
 		printf("0");
 	}
-	else if (fabs(D) < 1e-6)
+	else if (fabs(D) < 1e-4)
 	{
 		x1 = -b / (2.0 * a);
-		printf("1\n%.6lf", x1);
+		printf("1\n%.4lf", x1);
 	}
 	else
 	{
@@ -57,7 +57,7 @@ int main(int argc, char** argv)
 			x2 = x3;
 		}
 
-		printf("2\n%.6lf\n%.6lf", x1, x2);
+		printf("2\n%.4lf\n%.4lf", x1, x2);
 	}
 	return 0;
 
