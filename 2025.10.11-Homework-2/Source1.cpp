@@ -3,16 +3,13 @@
 
 int main(int argc, char** argv)
 {
-
+	char x1 = 0;
+	int y1 = 0;
+	char x2 = 0;
+	int y2 = 0;
 	int a = 0;
 
-	char start[3], end[3];
-	scanf("%s %s", start, end);
-
-	char x1 = start[0];
-	int y1 = start[1] - '0';
-	char x2 = end[0];
-	int y2 = end[1] - '0';
+	scanf("%c%d %c%d", &x1, &y1, &x2, &y2);
 
 	int dx = abs(x2 - x1);
 	int dy = abs(y2 - y1);

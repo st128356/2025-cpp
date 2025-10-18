@@ -3,12 +3,19 @@
 int main(int argc, char** argv)
 {
 
-    char a[7];
+    int n = 0;
 
-    scanf("%6s", &a);
+    scanf("%d", &n);
 
-    int firstsum = a[0] + a[1] + a[2];
-    int secondsum = a[3] + a[4] + a[5];
+    int n1 = n % 10;
+    int n2 = (n / 10) % 10;
+    int n3 = (n / 100) % 10;
+    int n4 = (n / 1000) % 10;
+    int n5 = (n / 10000) % 10;
+    int n6 = n / 100000;
+
+    int firstsum = n1 + n2 + n3;
+    int secondsum = n4 + n5 + n6;
 
     printf(firstsum == secondsum ? "YES" : "NO");
 
