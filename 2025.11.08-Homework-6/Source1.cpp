@@ -4,7 +4,7 @@
 int main(int argc, char** argv) 
 {
     int n = 0;
-    scanf_s("%d", &n);
+    scanf("%d", &n);
 
     long* arr = (long*)malloc(n * sizeof(long));
 
@@ -16,7 +16,7 @@ int main(int argc, char** argv)
     int i = 0;
     for (i = 0; i < n; i++) 
     {
-        scanf_s("%ld", &arr[i]);
+        scanf("%ld", &arr[i]);
     }
 
     int j = 0;

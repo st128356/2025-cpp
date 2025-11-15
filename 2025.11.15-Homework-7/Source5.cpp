@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+double power(double a, int n);
+
+int main(int argc, char** argv) 
+{
+    double a;
+    int n;
+
+    scanf("%lf %d", &a, &n);
+
+    double result = power(a, n);
+
+    printf("%lf", result);
+
+    return 0;
+}
+
+double power(double a, int n)
+{
+    if (n == 0)
+    {
+        return 1.0;
+    }
+    if (n < 0)
+    {
+        return 1.0 / power(a, -n);
+    }
+    if (n % 2 == 0)
+    {
+        double b = power(a, n / 2);
+        return b * b;
+    }
+    else
+    {
+        return a * power(a, n - 1);
+    }
+}
